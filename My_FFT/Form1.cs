@@ -27,7 +27,7 @@ namespace My_FFT
             var tb = new DataTable();
             tb.Columns.Add("Frequency", typeof(float));
             tb.Columns.Add("Amplitude", typeof(float));
-            for(int i=0;i<fft_cpx.Length;i++)
+            for(int i=0;i<fft_cpx.Length/2+1;i++)
             {
                 var freq = samp / fft_cpx.Length*i;
                 var amp = fft_cpx[i].Magnitude;
